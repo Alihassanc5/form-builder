@@ -7,10 +7,10 @@
         <h1>{{ page.title }}</h1>
         <h2>{{ page.description|richtext }}</h2>
 
-        <form action="{% pageurl page %}" method="POST">
+        <form action="{% pageurl page %}" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
-            <input type="submit">
+            <input type="submit" value="submit">
         </form>
     </body>
 </html>
